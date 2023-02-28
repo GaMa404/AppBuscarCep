@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AppBuscarCep.View;
+using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -10,7 +11,7 @@ namespace AppBuscarCep
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            MainPage = new NavigationPage(new View.BairrosPorCidade());
         }
 
         protected override void OnStart()
