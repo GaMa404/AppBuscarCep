@@ -4,7 +4,7 @@
              x:Class="AppBuscarCep.View.BairrosPorCidade">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="." />
+            <Label Text="XD" />
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

@@ -88,19 +88,19 @@ namespace AppBuscarCep.Service
 
         // ====== Obtém lista de CEP pelo logradouro ======
 
-        public static async Task<List<Endereco>> GetCepByLogradouro(int id_logradouro)
+        public static async Task<List<Cep>> GetCepByLogradouro(int logradouro)
         {
-            List<Endereco> arr_cep = new List<Endereco>();
+            List<Cep> arr_cep = new List<Cep>();
 
             using (HttpClient client = new HttpClient()) 
             {
-                HttpResponseMessage response = await client.GetAsync("https://cep.metoda.com.br/cep/by-logradouro?logradouro=" + id_logradouro);
+                HttpResponseMessage response = await client.GetAsync("https://cep.metoda.com.br/cep/by-logradouro?logradouro=" + logradouro);
 
                 if (response.IsSuccessStatusCode) 
                 {
                     string json = response.Content.ReadAsStringAsync().Result;
 
-                    arr_cep = JsonConvert.DeserializeObject<List<Endereco>>(json);
+                    arr_cep = JsonConvert.DeserializeObject<List<Cep>>(json);
                 }
                 else
                 {
@@ -113,9 +113,9 @@ namespace AppBuscarCep.Service
 
         // ====== Obtém lista de cidades pelo UF (estado ou DF) ======
 
-        public static async Task<List<Endereco>> GetCidadeByUF(string UF)
+        public static async Task<List<Cidade>> GetCidadeByUF(string UF)
         {
-            List<Endereco> arr_cidade = new List<Endereco>();
+            List<Cidade> arr_cidade = new List<Cidade>();
 
             using (HttpClient client = new HttpClient())
             {
@@ -125,7 +125,7 @@ namespace AppBuscarCep.Service
                 {
                     string json = response.Content.ReadAsStringAsync().Result;
 
-                    arr_cidade = JsonConvert.DeserializeObject<List<Endereco>>(json);
+                    arr_cidade = JsonConvert.DeserializeObject<List<Cidade>>(json);
                 }
                 else
                 {

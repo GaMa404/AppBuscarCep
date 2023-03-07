@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppBuscarCep.View.Menu">
+    <ContentPage.Content>
+        <Grid ColumnDefinitions="*, *" RowDefinitions="*, *, *, *">
+            <Label Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Text="API Busca CEP" />
+
+            <Button Grid.Row="1" Grid.Column="0" Text="Buscar CEP" Clicked="Button_Clicked"/>
+
+            <Button Grid.Row="1" Grid.Column="1" Text="Buscar Cidades" Clicked="Button_Clicked_1"/>
+
+            <Button Grid.Row="2" Grid.Column="0" Text="Buscar Ruas de Bairros" Clicked="Button_Clicked_2" />
+
+            <Button Grid.Row="2" Grid.Column="1" Text="Buscar Bairros" Clicked="Button_Clicked_3"/>
+
+            <Button Grid.Row="3" Grid.Column="0" Text="Buscar Logradouros" Clicked="Button_Clicked_4" />
+
+
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
