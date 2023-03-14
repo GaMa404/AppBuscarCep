@@ -38,13 +38,13 @@ namespace AppBuscarCep.Service
 
         // ====== Obtém lista de bairro pela cidade ======
 
-        public static async Task<List<Bairro>> GetBairrosByCidade(int id_cidade)
+        public static async Task<List<Bairro>> GetBairrosByCidade(string cidade)
         {
             List<Bairro> arr_bairros = new List<Bairro>();
 
             using (HttpClient client = new HttpClient())
             {
-                HttpResponseMessage response = await client.GetAsync("https://cep.metoda.com.br/bairro/by-cidade?id_cidade=" + id_cidade);
+                HttpResponseMessage response = await client.GetAsync("https://cep.metoda.com.br/bairro/by-cidade?id_cidade=" + cidade);
 
                 if (response.IsSuccessStatusCode)
                 {
@@ -88,7 +88,7 @@ namespace AppBuscarCep.Service
 
         // ====== Obtém lista de CEP pelo logradouro ======
 
-        public static async Task<List<Cep>> GetCepByLogradouro(int logradouro)
+        public static async Task<List<Cep>> GetCepByLogradouro(string logradouro)
         {
             List<Cep> arr_cep = new List<Cep>();
 

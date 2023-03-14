@@ -36,7 +36,7 @@ namespace AppBuscarCep.View
 
         private void Button_Clicked_3(object sender, EventArgs e)
         {
-            //Navigation.PushAsync(new());
+            Navigation.PushAsync(new BairrosPorCidade());
         }
 
         private void Button_Clicked_4(object sender, EventArgs e)

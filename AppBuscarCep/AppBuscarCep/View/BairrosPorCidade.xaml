@@ -4,7 +4,33 @@
              x:Class="AppBuscarCep.View.BairrosPorCidade">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="XD" />
+            <StackLayout Orientation="Horizontal">
+                <SearchBar x:Name="txt_cidade" Placeholder="Qual é a sua cidade?" />
+                <Button Text="Buscar" Clicked="Button_Clicked" />
+            </StackLayout>
+
+            <ActivityIndicator x:Name="carregando" IsRunning="False" />
+
+            <ListView x:Name="lst_bairros">
+                <ListView.Header>
+                    <Grid ColumnDefinitions="Auto, *" RowDefinitions="Auto">
+                        <Label Grid.Row="0" Grid.Column="0" Text="Bairro" />
+                        <Label Grid.Row="0" Grid.Column="1" Text="Cidade" />
+                    </Grid>
+                </ListView.Header>
+
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Grid ColumnDefinitions="Auto, *Auto" RowDefinitions="Auto">
+                                <Label Grid.Row="0" Grid.Column="0" Text="{Binding descricao_bairro}" />
+                                <Label Grid.Row="0" Grid.Column="1" Text="{Binding cidade}" />
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
