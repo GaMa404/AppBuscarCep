@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="AppBuscarCep.View.BairrosPorCidade">
+             x:Class="AppBuscarCep.View.CidadesPorEstado">
     <ContentPage.Content>
         <StackLayout>
             <StackLayout Orientation="Horizontal">
@@ -37,23 +37,19 @@
                     </Picker.Items>
                 </Picker>
 
-                <Picker x:Name="pck_cidade" SelectedIndexChanged="pck_cidade_SelectedIndexChanged" ItemDisplayBinding="{Binding descricao}"
-                         Title="Selecione a cidade">
-                </Picker>
-
                 <ActivityIndicator x:Name="carregando" IsRunning="False" />
 
             </StackLayout>
 
-            <ListView x:Name="lst_bairros">
+            <ListView x:Name="lst_cidades">
                 <ListView.Header>
-                    <Label Grid.Row="0" Grid.Column="0" Text="Bairros" />
+                    <Label Grid.Row="0" Grid.Column="0" Text="Cidades" />
                 </ListView.Header>
-            
+
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
-                            <Label Grid.Row="0" Grid.Column="0" Text="{Binding descricao_bairro}" />
+                            <Label Grid.Row="0" Grid.Column="0" Text="{Binding descricao}" />
                         </ViewCell>
                     </DataTemplate>
                 </ListView.ItemTemplate>
