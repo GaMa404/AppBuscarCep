@@ -12,9 +12,9 @@ using Xamarin.Forms.Xaml;
 namespace AppBuscarCep.View
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class EnderecoPorCep : ContentPage
+    public partial class LogradouroPorCep : ContentPage
     {
-        public EnderecoPorCep()
+        public LogradouroPorCep()
         {
             InitializeComponent();
         }
@@ -26,7 +26,7 @@ namespace AppBuscarCep.View
                 carregando.IsRunning = true;
                 Endereco arr_end = await DataService.GetEnderecoByCep(txt_cep.Text);
 
-                lst_endereco.ItemsSource = new List<Endereco>() { arr_end };
+                lst_enderecos.ItemsSource = arr_end;
             }
             catch (Exception ex)
             {
@@ -38,4 +38,5 @@ namespace AppBuscarCep.View
             }
         }
     }
+
 }

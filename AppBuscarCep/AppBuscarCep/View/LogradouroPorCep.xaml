@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppBuscarCep.View.LogradouroPorCep">
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <SearchBar x:Name="txt_cep" Placeholder="Qual é o seu CEP?" />
+                <Button Text="Buscar" Clicked="Button_Clicked"/>
+            </StackLayout>
+
+            <ActivityIndicator x:Name="carregando" IsRunning="False" />
+
+            <ListView x:Name="lst_logradouros">
+                <ListView.Header>
+                    <Grid ColumnDefinitions="Auto, *" RowDefinitions="Auto">
+                        <Label Grid.Row="0" Grid.Column="0" Text="Logradouro" />
+                    </Grid>
+                </ListView.Header>
+
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Grid ColumnDefinitions="Auto, *" RowDefinitions="Auto">
+                                <Label Grid.Row="0" Grid.Column="0" Text="{Binding logradouro}" />
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

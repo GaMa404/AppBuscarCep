@@ -12,16 +12,16 @@
 
   <ItemGroup>
     <Compile Remove="View\CepPorLogradouro.xaml.cs" />
-    <Compile Remove="View\EnderecoPorCep.xaml.cs" />
     <Compile Remove="View\EnderecoPorCidade.xaml.cs" />
     <Compile Remove="View\LogradouroPorBairro.xaml.cs" />
+    <Compile Remove="View\LogradouroPorCep.xaml.cs" />
   </ItemGroup>
 
   <ItemGroup>
     <EmbeddedResource Remove="View\CepPorLogradouro.xaml" />
-    <EmbeddedResource Remove="View\EnderecoPorCep.xaml" />
     <EmbeddedResource Remove="View\EnderecoPorCidade.xaml" />
     <EmbeddedResource Remove="View\LogradouroPorBairro.xaml" />
+    <EmbeddedResource Remove="View\LogradouroPorCep.xaml" />
   </ItemGroup>
 
   <ItemGroup>
@@ -38,6 +38,12 @@
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="View\CidadesPorEstado.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="View\EnderecoPorCep.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="View\LogradouroPorBairroECidade.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="View\Menu.xaml">

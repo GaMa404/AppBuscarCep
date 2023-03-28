@@ -14,7 +14,7 @@
 
             <Button Grid.Row="2" Grid.Column="1" Text="Buscar Bairros" Clicked="Button_Clicked_3"/>
 
-            <Button Grid.Row="3" Grid.Column="0" Text="Buscar Logradouros" Clicked="Button_Clicked_4" />
+            <Button Grid.Row="3" Grid.Column="0" Text="Buscar Endereços" Clicked="Button_Clicked_4" />
 
 
         </Grid>
