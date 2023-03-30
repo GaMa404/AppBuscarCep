@@ -4,9 +4,64 @@
              x:Class="AppBuscarCep.View.LogradouroPorBairroECidade">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+            <StackLayout Orientation="Horizontal">
+                <Picker x:Name="pck_estado" SelectedIndexChanged="pck_estado_SelectedIndexChanged" Title="Selecione o Estado:">
+                    <Picker.Items>
+                        <x:String>AC</x:String>
+                        <x:String>AL</x:String>
+                        <x:String>AP</x:String>
+                        <x:String>AM</x:String>
+                        <x:String>BA</x:String>
+                        <x:String>CE</x:String>
+                        <x:String>DF</x:String>
+                        <x:String>ES</x:String>
+                        <x:String>GO</x:String>
+                        <x:String>MA</x:String>
+                        <x:String>MT</x:String>
+                        <x:String>MS</x:String>
+                        <x:String>MG</x:String>
+                        <x:String>PA</x:String>
+                        <x:String>PB</x:String>
+                        <x:String>PR</x:String>
+                        <x:String>PE</x:String>
+                        <x:String>PI</x:String>
+                        <x:String>RJ</x:String>
+                        <x:String>RN</x:String>
+                        <x:String>RS</x:String>
+                        <x:String>RO</x:String>
+                        <x:String>RR</x:String>
+                        <x:String>SC</x:String>
+                        <x:String>SP</x:String>
+                        <x:String>SE</x:String>
+                        <x:String>TO</x:String>
+                    </Picker.Items>
+                </Picker>
+
+                <Picker x:Name="pck_cidade" SelectedIndexChanged="pck_cidade_SelectedIndexChanged" ItemDisplayBinding="{Binding descricao}"
+                         Title="Selecione a cidade">
+                </Picker>
+
+                <Picker x:Name="pck_bairro" SelectedIndexChanged="pck_bairro_SelectedIndexChanged" ItemDisplayBinding="{Binding descricao}"
+                         Title="Selecione o bairro">
+                </Picker>
+
+                <ActivityIndicator x:Name="carregando" IsRunning="False" />
+
+            </StackLayout>
+
+            <ListView x:Name="lst_log">
+                <ListView.Header>
+                    <Label Grid.Row="0" Grid.Column="0" Text="Logradouro" />
+                </ListView.Header>
+
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Label Grid.Row="0" Grid.Column="0" Text="{Binding descricao}" />
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
