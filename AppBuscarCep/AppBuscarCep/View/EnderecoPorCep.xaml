@@ -13,24 +13,24 @@
 
                 <ListView x:Name="lst_endereco">
                     <ListView.Header>
-                        <Grid ColumnDefinitions="*, *, *, *" RowDefinitions="Auto">
+                        <Grid ColumnDefinitions="*, *, *, *, *" RowDefinitions="Auto">
                             <Label Grid.Row="0" Grid.Column="0" Text="CEP" />
                             <Label Grid.Row="0" Grid.Column="1" Text="Rua" />
                             <Label Grid.Row="0" Grid.Column="2" Text="Bairro" />
-                            <Label Grid.Row="0" Grid.Column="4" Text="Cidade" />
-                            <Label Grid.Row="0" Grid.Column="5" Text="UF" />
+                            <Label Grid.Row="0" Grid.Column="3" Text="Cidade" />
+                            <Label Grid.Row="0" Grid.Column="4" Text="UF" />
                         </Grid>
                     </ListView.Header>
 
                     <ListView.ItemTemplate>
                         <DataTemplate>
                             <ViewCell>
-                                <Grid ColumnDefinitions=" *, *, *, *" RowDefinitions="Auto">
+                                <Grid ColumnDefinitions=" *, *, *, *, *" RowDefinitions="Auto">
                                     <Label Grid.Row="0" Grid.Column="0" Text="{Binding CEP}" />
                                     <Label Grid.Row="0" Grid.Column="1" Text="{Binding descricao}" />
-                                    <Label Grid.Row="0" Grid.Column="1" Text="{Binding descricao_bairro}" />
-                                    <Label Grid.Row="0" Grid.Column="2" Text="{Binding descricao_cidade}" />
-                                    <Label Grid.Row="0" Grid.Column="3" Text="{Binding UF}" />
+                                    <Label Grid.Row="0" Grid.Column="2" Text="{Binding descricao_bairro}" />
+                                    <Label Grid.Row="0" Grid.Column="3" Text="{Binding descricao_cidade}" />
+                                    <Label Grid.Row="0" Grid.Column="4" Text="{Binding UF}" />
                                 </Grid>
                             </ViewCell>
                         </DataTemplate>

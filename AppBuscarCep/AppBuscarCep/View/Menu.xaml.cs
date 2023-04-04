@@ -31,7 +31,7 @@ namespace AppBuscarCep.View
 
         private void Button_Clicked_2(object sender, EventArgs e)
         {
-            //Navigation.PushAsync(new ());
+            Navigation.PushAsync(new LogradouroPorBairroECidade());
         }
 
         private void Button_Clicked_3(object sender, EventArgs e)

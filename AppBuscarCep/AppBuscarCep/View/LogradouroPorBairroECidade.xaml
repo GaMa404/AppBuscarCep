@@ -5,7 +5,7 @@
     <ContentPage.Content>
         <StackLayout>
             <StackLayout Orientation="Horizontal">
-                <Picker x:Name="pck_estado" SelectedIndexChanged="pck_estado_SelectedIndexChanged" Title="Selecione o Estado:">
+                <Picker x:Name="pck_estado" SelectedIndexChanged="pck_estado_SelectedIndexChanged" Title="Selecione o estado">
                     <Picker.Items>
                         <x:String>AC</x:String>
                         <x:String>AL</x:String>
@@ -40,14 +40,13 @@
                 <Picker x:Name="pck_cidade" SelectedIndexChanged="pck_cidade_SelectedIndexChanged" ItemDisplayBinding="{Binding descricao}"
                          Title="Selecione a cidade">
                 </Picker>
-
-                <Picker x:Name="pck_bairro" SelectedIndexChanged="pck_bairro_SelectedIndexChanged" ItemDisplayBinding="{Binding descricao}"
-                         Title="Selecione o bairro">
-                </Picker>
-
-                <ActivityIndicator x:Name="carregando" IsRunning="False" />
-
             </StackLayout>
+
+            <Picker x:Name="pck_bairro" SelectedIndexChanged="pck_bairro_SelectedIndexChanged" ItemDisplayBinding="{Binding descricao}" 
+                    Title="Selecione o bairro">
+            </Picker>
+
+            <ActivityIndicator x:Name="carregando" IsRunning="False" />
 
             <ListView x:Name="lst_log">
                 <ListView.Header>

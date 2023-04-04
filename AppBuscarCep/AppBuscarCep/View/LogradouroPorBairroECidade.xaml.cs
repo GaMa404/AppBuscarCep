@@ -74,7 +74,7 @@ namespace AppBuscarCep.View
             }
         }
 
-        /*private async void pck_bairro_SelectedIndexChanged(object sender, EventArgs e)
+        private async void pck_bairro_SelectedIndexChanged(object sender, EventArgs e)
         {
             try
             {
@@ -82,13 +82,14 @@ namespace AppBuscarCep.View
 
                 Picker disparador = sender as Picker;
 
-                Cidade bairro_selecionado = disparador.SelectedItem as Cidade;
+                Bairro bairro_selecionado = disparador.SelectedItem as Bairro;
+                Cidade cidade_selecionada = pck_cidade.SelectedItem as Cidade;
 
-                List<Logradouro> arr_log = await DataService.GetLogradouroByBairroAndCidade(bairro_selecionado.id_cidade);
+                List<Logradouro> arr_log = await DataService.GetLogradouroByBairroAndCidade(cidade_selecionada.id_cidade, bairro_selecionado.descricao_bairro);
 
-                lista_bairros.Clear();
+                lista_log.Clear();
 
-                arr_bairros.ForEach(i => lista_bairros.Add(i));
+                arr_log.ForEach(i => lista_log.Add(i));
             }
             catch (Exception ex)
             {
@@ -98,6 +99,6 @@ namespace AppBuscarCep.View
             {
                 carregando.IsRunning = false;
             }
-        }*/
+        }
     }
 }

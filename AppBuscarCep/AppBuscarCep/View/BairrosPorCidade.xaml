@@ -5,7 +5,7 @@
     <ContentPage.Content>
         <StackLayout>
             <StackLayout Orientation="Horizontal">
-                <Picker x:Name="pck_estado" SelectedIndexChanged="pck_estado_SelectedIndexChanged" Title="Selecione o Estado:">
+                <Picker x:Name="pck_estado" SelectedIndexChanged="pck_estado_SelectedIndexChanged" Title="Selecione o estado">
                     <Picker.Items>
                         <x:String>AC</x:String>
                         <x:String>AL</x:String>
